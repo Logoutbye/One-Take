@@ -34,3 +34,4 @@ Set Banuba license token [within the app](lib/main.dart#L43)
 | Flutter   | 3.19.2  |
 | Android      |  6.0+   |
 | iOS          |  13.0+  |# One-Take
+# One-Take
