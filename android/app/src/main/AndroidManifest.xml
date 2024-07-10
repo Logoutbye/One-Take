@@ -13,7 +13,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:label="flutter_ve_sdk"
+        android:label="OneTake"
         android:icon="@mipmap/ic_launcher"
         android:usesCleartextTraffic="true">
         <activity
