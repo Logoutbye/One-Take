@@ -68,12 +68,24 @@ PODS:
     - BNBEffectPlayer (= 1.14.0)
     - BNBScripting (= 1.14.0)
     - BNBSdkCore (= 1.14.0)
+  - device_info_plus (0.0.1):
+    - Flutter
   - Flutter (1.0.0)
+  - fluttertoast (0.0.2):
+    - Flutter
+    - Toast
   - image_picker_ios (0.0.1):
     - Flutter
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
+  - permission_handler_apple (9.3.0):
+    - Flutter
+  - receive_sharing_intent_plus (1.0.1):
+    - Flutter
+  - saver_gallery (0.0.1):
+    - Flutter
+  - Toast (4.1.1)
   - url_launcher_ios (0.0.1):
     - Flutter
   - VEEffectsSDK (1.36.0)
@@ -93,9 +105,14 @@ DEPENDENCIES:
   - BanubaVideoEditorGallerySDK (= 1.36.0)
   - BanubaVideoEditorSDK (= 1.36.0)
   - BNBLicenseUtils (= 1.36.0)
+  - device_info_plus (from `.symlinks/plugins/device_info_plus/ios`)
   - Flutter (from `Flutter`)
+  - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
   - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
+  - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
+  - receive_sharing_intent_plus (from `.symlinks/plugins/receive_sharing_intent_plus/ios`)
+  - saver_gallery (from `.symlinks/plugins/saver_gallery/ios`)
   - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
   - VEEffectsSDK (= 1.36.0)
   - VEExportSDK (= 1.36.0)
@@ -119,6 +136,8 @@ SPEC REPOS:
     - VEExportSDK
     - VEPlaybackSDK
     - VideoEditor
+  https://github.com/CocoaPods/Specs.git:
+    - Toast
   https://github.com/sdk-banuba/banuba-sdk-podspecs.git:
     - BNBAcneEyebagsRemoval
     - BNBBackground
@@ -133,12 +152,22 @@ SPEC REPOS:
     - BNBSkin
 
 EXTERNAL SOURCES:
+  device_info_plus:
+    :path: ".symlinks/plugins/device_info_plus/ios"
   Flutter:
     :path: Flutter
+  fluttertoast:
+    :path: ".symlinks/plugins/fluttertoast/ios"
   image_picker_ios:
     :path: ".symlinks/plugins/image_picker_ios/ios"
   path_provider_foundation:
     :path: ".symlinks/plugins/path_provider_foundation/darwin"
+  permission_handler_apple:
+    :path: ".symlinks/plugins/permission_handler_apple/ios"
+  receive_sharing_intent_plus:
+    :path: ".symlinks/plugins/receive_sharing_intent_plus/ios"
+  saver_gallery:
+    :path: ".symlinks/plugins/saver_gallery/ios"
   url_launcher_ios:
     :path: ".symlinks/plugins/url_launcher_ios/ios"
 
@@ -165,9 +194,15 @@ SPEC CHECKSUMS:
   BNBSdkApi: 643aaa073cce1586da08448cbf122c591640eeb1
   BNBSdkCore: 4269ec77c8e88e3d13a00984da9f5622411844e1
   BNBSkin: 9387b882a73a1527bc19232b8ce7eba4857fe900
+  device_info_plus: 97af1d7e84681a90d0693e63169a5d50e0839a0d
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  fluttertoast: e9a18c7be5413da53898f660530c56f35edfba9c
   image_picker_ios: 4a8aadfbb6dc30ad5141a2ce3832af9214a705b5
   path_provider_foundation: 29f094ae23ebbca9d3d0cec13889cd9060c0e943
+  permission_handler_apple: 9878588469a2b0d0fc1e048d9f43605f92e6cec2
+  receive_sharing_intent_plus: f02db0a23c17f7aeef8de465cb2d8705a46143a6
+  saver_gallery: 2b4e584106fde2407ab51560f3851564963e6b78
+  Toast: 1f5ea13423a1e6674c4abdac5be53587ae481c4e
   url_launcher_ios: 08a3dfac5fb39e8759aeb0abbd5d9480f30fc8b4
   VEEffectsSDK: d5825579c9b2724833e7e15aac26b2433f1749be
   VEExportSDK: 9cc363e5f34461b95af7a39b9bc97bf75f07ed58

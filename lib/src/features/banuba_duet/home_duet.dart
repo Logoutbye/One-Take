@@ -8,7 +8,6 @@ import 'package:flutter_ve_sdk/src/config/helpler.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_ve_sdk/src/core/widgets/center_indicator.dart';
 import 'package:flutter_ve_sdk/src/core/widgets/custom_elevated_btn.dart';
-import 'package:flutter_ve_sdk/src/features/banuba_duet/video_services.dart';
 import 'package:flutter_ve_sdk/src/features/banuba_duet/widget.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
