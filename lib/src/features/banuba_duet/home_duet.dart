@@ -13,6 +13,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:receive_sharing_intent_plus/receive_sharing_intent_plus.dart';
 import 'package:saver_gallery/saver_gallery.dart';
+
 // kkk
 class HomeDuet extends StatefulWidget {
   const HomeDuet({super.key});
@@ -22,6 +23,8 @@ class HomeDuet extends StatefulWidget {
 }
 
 class _HomeDuetState extends State<HomeDuet> {
+
+  
   SharedMediaFile? _sharedFile;
   String? _sharedUrl;
 
@@ -87,23 +90,6 @@ class _HomeDuetState extends State<HomeDuet> {
       _detectAndPrintUrlType(initialText);
     }
   }
-
-  // // Private function to detect and print the type of media file shared
-  // static void _detectAndPrintMediaType(SharedMediaType type) {
-  //   String mediaType;
-  //   switch (type) {
-  //     case SharedMediaType.image:
-  //       mediaType = 'Image';
-  //       break;
-  //     case SharedMediaType.video:
-  //       mediaType = 'Video';
-  //       break;
-  //     default:
-  //       mediaType = 'Unknown';
-  //       break;
-  //   }
-  //   debugPrint('Shared File Type: $mediaType');
-  // }
 
   // Private function to detect and print the source of the shared URL
   void _detectAndPrintUrlType(String url) {
@@ -241,14 +227,11 @@ class _HomeDuetState extends State<HomeDuet> {
   static const methodInitVideoEditor = 'initVideoEditor';
   static const methodStartVideoEditorPIP = 'startVideoEditorPIP';
   static const methodDemoPlayExportedVideo = 'playExportedVideo';
-
   static const argExportedVideoFile = 'argExportedVideoFilePath';
-  static const argExportedVideoCoverPreviewPath =
-      'argExportedVideoCoverPreviewPath';
-
+  static const argExportedVideoCoverPreviewPath = 'argExportedVideoCoverPreviewPath';
   static const platformChannel = MethodChannel('banubaSdkChannel');
 
-  String _errorMessage = '';
+  String errorMessage = '';
 
   Future<void> _initVideoEditor() async {
     await platformChannel.invokeMethod(methodInitVideoEditor, LICENSE_TOKEN);
@@ -309,7 +292,7 @@ class _HomeDuetState extends State<HomeDuet> {
         errorMessage = 'unknown error';
     }
 
-    _errorMessage = errorMessage;
+    errorMessage = errorMessage;
     setState(() {});
   }
 
@@ -400,16 +383,6 @@ class _HomeDuetState extends State<HomeDuet> {
     } on PlatformException catch (e) {
       _handlePlatformException(e);
     }
-  }
-
-  static Future<void> saveVideoToGallery(videoPath) async {
-    // await GallerySaver.saveVideo(videoPath, albumName: 'TikTok_downloads');
-    final result = await SaverGallery.saveFile(
-        file: videoPath,
-        androidExistNotSave: true,
-        name: '123.mp4',
-        androidRelativePath: "Movies");
-    print(result);
   }
 
   void _showDownloadBottomSheet(BuildContext context, String platform) {
@@ -564,6 +537,16 @@ class _HomeDuetState extends State<HomeDuet> {
     }
   }
 
+  static Future<void> saveVideoToGallery(videoPath) async {
+    // await GallerySaver.saveVideo(videoPath, albumName: 'TikTok_downloads');
+    final result = await SaverGallery.saveFile(
+        file: videoPath,
+        androidExistNotSave: true,
+        name: '123.mp4',
+        androidRelativePath: "Movies");
+    print(result);
+  }
+
   @override
   void dispose() {
     genericVideoLinkController.dispose();
@@ -572,27 +555,3 @@ class _HomeDuetState extends State<HomeDuet> {
     super.dispose();
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
